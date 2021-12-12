@@ -56,6 +56,10 @@ fn main() {
     let max_score_by_score = scores.iter().max_by_key(|(_idx, score)| score);
     println!("{:?}", winning_score);
     println!("{:?}", max_score_by_score);
+
+    //part 2
+    let last_winning_score = scores.iter().max_by_key(|(idx, _score)| idx);
+    println!("last winning: {:?}", last_winning_score);
 }
 
 fn create_marked_board(board: &Vec<Vec<u32>>, numbers: &Vec<u32>) -> Vec<Vec<(u32, Option<usize>)>> {
